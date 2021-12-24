@@ -69,6 +69,7 @@ class SimpleUI:
                     f"{item[0]} | {item[1]} | {item[2]} | {item[3]} | {item[4]}"
                 )
                 self.contact_list.insert(tk.END, pretty_text)
+        self.entry_query.delete(0, tk.END)
 
     def insert(self):
         first_name = self.entry_first_name.get()
@@ -88,6 +89,7 @@ class SimpleUI:
         self.db_handler.delete(id)
         self.entry_query.delete(0, tk.END)
         self.query()
+        self.entry_delete.delete(0, tk.END)
 
 
 def main():
